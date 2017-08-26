@@ -52,3 +52,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Validates Email adresses
+gem 'validates_email_format_of'
+
+#To ensure secure passwords and be able to authenticate users
+gem 'bcrypt'

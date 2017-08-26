@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+input[type=text], [type=password]  {
+					width: 200px;
+					border-radius: 5px;
+					padding: 12px 20px;
+					padding-left: 45px;
+					border: solid 2px #DFDFDF;
+					-webkit-transition:  0.4s;
+					 transition: 0.4s;
+}
+input[type=text]:focus{
+	border: solid 2px #8DFFF4;
+	border-radius: 5px;
+}
+#Username{
+	background-color: white;
+	background-image: image-url('User_icon');
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	text: "enter username";
+}
+
+#password {
+	background-color: white;
+	background-image: image-url('password_icon');
+	background-repeat: no-repeat;
+	background-position: 5px 3px;
+}
+
+#email {
+	background-color: white;
+	background-image: image-url('email_icon');
+	background-repeat: no-repeat;
+	background-position: 4px 3px;
+}
+
+#Register {
+	width: 150px;
+	height: 50px;
+	border-radius: 50px;
+	border: solid 3px #8DFFF4;
+	background-color: white;
+	color: #8DFFF4;
+}
+
+#Register:hover {
+	background-color:#8DFFF4;
+	color:white;
+}
+
+#Register:active {
+	padding-top: 5px;
+}

@@ -1,0 +1,65 @@
+<%= form_with(model: user, local: true) do |form| %>
+
+<!--  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ -->
+  
+	<div class="field">
+		<% if user.errors.any? %>
+		<div id="error_explanation">
+		<ul>
+		<% user.errors.full_messages_for(:Username).each do |message| %>
+		<li> <%= message %> </li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+		Username</br>
+		<%= form.text_field :Username, id: :Username, placeholder: "Enter username.." %>
+	</div>
+	
+	
+	<% if user.errors.any? %>
+	<div id="error_explanation">
+		<ul>
+			
+		<% user.errors.full_messages_for( :password ).each do |message| %>
+			<li> <%= message %> </li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+	</div>
+	
+	<div class="field">
+		<a>Password </br></a>
+		<%= form.password_field :password, id: :password, placeholder: "Enter password.." %>
+	</div>
+	
+	
+	<div class="field">
+		<% if user.errors.any? %>
+		<div id="error_explanation">
+			<ul>
+				<% user.errors.full_messages_for( :email ).each do |message| %>
+				<li> <%= message %> </li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+		<a>Email</br></a>
+		<%= form.text_field :email, id: :email, placeholder: "Enter Email.."%>
+	</div>
+	
+  <div class="actions">
+    <%= form.submit id: "Register" %>
+  </div>
+<% end %>
